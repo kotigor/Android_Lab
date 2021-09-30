@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/EventNavigation"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_event_note_24"
+        android:title="@string/navigation_button_events_text"/>
+    <item
+        android:id="@+id/HolidaysNavigation"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_list_24"
+        android:title="@string/navigation_button_holidays_text"/>
+    <item
+        android:id="@+id/ProfileNavigation"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person_outline_24"
+        android:title="@string/navigation_button_profile_text"/>
+</menu>
