@@ -19,22 +19,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.bottomNavigation.setOnItemSelectedListener {
-            when(it.itemId){
-                R.id.EventNavigation -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.container, EventListFragment()).commit()
-                    true
-                }
-                R.id.HolidaysNavigation -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.container, HolidaysFragment()).commit()
-                    true
-                }
-                R.id.ProfileNavigation -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.container, ProfileFragment()).commit()
-                    true
-                }
-                else -> false
-            }
-        }
+        val navController = findNavController(R.id.container)
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.EventNavigation, R.id.HolidaysNavigation, R.id.ProfileNavigation))
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        binding.bottomNavigation.setupWithNavController(navController)
     }
 }
