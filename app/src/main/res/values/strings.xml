@@ -3,4 +3,7 @@
     <string name="navigation_button_profile_text">Профиль</string>
     <string name="navigation_button_holidays_text">Праздники</string>
     <string name="navigation_button_events_text">События</string>
+    <string name="title">TITLE</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="date">DATE</string>
 </resources>
