@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="borderPaddingMedium">12dp</dimen>
+    <dimen name="borderPaddingMedium">16dp</dimen>
+    <dimen name="textPaddingMedium">16dp</dimen>
+    <dimen name="textSizeMedium">24sp</dimen>
 </resources>

@@ -11,12 +11,14 @@ import ru.konstantinov.lab4.databinding.ActivityMainBinding
 import ru.konstantinov.lab4.ui.EventListFragment
 import ru.konstantinov.lab4.ui.HolidaysFragment
 import ru.konstantinov.lab4.ui.ProfileFragment
+import ru.konstantinov.lab4.ui.common.App
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        (applicationContext as App).mainRouter = MainRouter(supportFragmentManager)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.bottomNavigation.setOnItemSelectedListener {
@@ -36,5 +38,6 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
+        supportFragmentManager.beginTransaction().replace(R.id.container, EventListFragment()).commit()
     }
 }

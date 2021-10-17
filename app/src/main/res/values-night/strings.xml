@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="input_name_event">Название события:</string>
+    <string name="input_descr_event">Описание:</string>
+    <string name="input_time_event">Время:</string>
+    <string name="choose_time_event">Выбрать время</string>
+    <string name="add_event_button">Добавить событие</string>
+</resources>

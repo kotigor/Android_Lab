@@ -2,16 +2,75 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/borderPaddingMedium">
 
-    <TextView
+    <ImageView
+        android:id="@+id/profileSettingsIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PROFILE"
-        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_baseline_settings_24"
+        app:layout_constraintBottom_toBottomOf="@id/profileSettingsText"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/profileSettingsText" />
+
+    <TextView
+        android:id="@+id/profileSettingsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/borderPaddingMedium"
+        android:layout_marginBottom="@dimen/borderPaddingMedium"
+        android:text="@string/settingsLabel"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/profileAboutIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profileAboutIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_info_24"
+
+        app:layout_constraintTop_toTopOf="@id/profileAboutText"
+        app:layout_constraintBottom_toBottomOf="@id/profileAboutText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/profileAboutText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/borderPaddingMedium"
+        android:layout_marginBottom="@dimen/borderPaddingMedium"
+        android:text="@string/about"
+        android:textSize="@dimen/textSizeMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/profileSettingsIcon"
+        app:layout_constraintTop_toBottomOf="@id/profileSettingsText" />
+
+    <ImageView
+        android:id="@+id/profileShareIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_share_24"
+
+        app:layout_constraintTop_toTopOf="@id/profileShareText"
+        app:layout_constraintBottom_toBottomOf="@id/profileShareText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/profileShareText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/borderPaddingMedium"
+        android:layout_marginBottom="@dimen/borderPaddingMedium"
+        android:text="@string/share_friends"
+        android:textSize="@dimen/textSizeMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@+id/profileShareIcon"
+        app:layout_constraintTop_toBottomOf="@id/profileAboutText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

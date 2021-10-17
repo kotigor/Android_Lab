@@ -15,7 +15,7 @@ internal class EventAdapter : RecyclerView.Adapter<ViewHolder>() {
     private var events = mutableListOf<EventReminder>()
 
     fun add(newEvents: List<EventReminder>){
-        events.addAll(newEvents)
+        events = newEvents as MutableList<EventReminder>
         notifyDataSetChanged()
     }
 
@@ -38,7 +38,7 @@ internal class ViewHolder(val binding: RecyclerviewEventItemBinding) : RecyclerV
         binding.apply {
             title.text = eventReminder.title
             description.text = eventReminder.desc
-            date.text = SimpleDateFormat("MMM dd yyyy HH:mma").format(eventReminder.dateStart)
+            date.text = SimpleDateFormat("dd.MM.yy\nHH:mm").format(eventReminder.dateStart)
         }
     }
 }
