@@ -1,4 +1,4 @@
-package ru.konstantinov.lab4.ui
+package ru.konstantinov.lab4.ui.profile
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import ru.konstantinov.lab4.R
-import ru.konstantinov.lab4.databinding.FragmentEventsBinding
 import ru.konstantinov.lab4.databinding.FragmentProfileBinding
-import ru.konstantinov.lab4.ui.common.App
+import ru.konstantinov.lab4.ui.settings.SettingsFragment
+import ru.konstantinov.lab4.ui.about.AboutFragment
 
 class ProfileFragment : Fragment() {
     private lateinit var binding: FragmentProfileBinding

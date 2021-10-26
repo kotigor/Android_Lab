@@ -1,21 +1,19 @@
-package ru.konstantinov.lab4.ui.event
+package ru.konstantinov.lab4.ui.eventlist
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import ru.konstantinov.lab4.R
+import ru.konstantinov.lab4.BR
 import ru.konstantinov.lab4.databinding.RecyclerviewEventItemBinding
-import ru.konstantinov.lab4.model.EventReminder
 import java.text.SimpleDateFormat
 
 internal class EventAdapter : RecyclerView.Adapter<ViewHolder>() {
 
-    private var events = mutableListOf<EventReminder>()
+    private var events = mutableListOf<EventVM>()
 
-    fun add(newEvents: List<EventReminder>){
-        events = newEvents as MutableList<EventReminder>
+    fun reload(newEvents: List<EventVM>){
+        events.clear()
+        events.addAll(newEvents)
         notifyDataSetChanged()
     }
 
@@ -34,11 +32,12 @@ internal class EventAdapter : RecyclerView.Adapter<ViewHolder>() {
 }
 
 internal class ViewHolder(val binding: RecyclerviewEventItemBinding) : RecyclerView.ViewHolder(binding.root){
-    fun bind(eventReminder: EventReminder){
+    fun bind(eventReminder: EventVM){
         binding.apply {
-            title.text = eventReminder.title
-            description.text = eventReminder.desc
-            date.text = SimpleDateFormat("dd.MM.yy\nHH:mm").format(eventReminder.dateStart)
+            setVariable(BR.viewModel, eventReminder)
+            title.text = eventReminder.eventReminder.title
+            description.text = eventReminder.eventReminder.desc
+            date.text = SimpleDateFormat("dd.MM.yy").format(eventReminder.eventReminder.dateStart)
         }
     }
 }

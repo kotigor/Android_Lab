@@ -1,111 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="@dimen/borderPaddingMedium"
-    android:background="@color/black">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/text_title_events"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/input_name_event"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/input_title_events"
-        app:layout_constraintBottom_toBottomOf="@id/input_title_events"/>
+    <data>
+        <variable
+            name="viewModel"
+            type="ru.konstantinov.lab4.ui.addevent.AddEventVM" />
+    </data>
 
-    <EditText
-        android:id="@+id/input_title_events"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/text_title_events"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/text_description_events"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/input_descr_event"
-        app:layout_constraintTop_toTopOf="@id/input_description_events"
-        app:layout_constraintBottom_toBottomOf="@id/input_description_events"
-        app:layout_constraintStart_toStartOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/borderPaddingMedium"
+        android:background="@color/black"
+        android:clickable="true"
+        android:focusable="true">
 
-    <EditText
-        android:id="@+id/input_description_events"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/text_description_events"
-        app:layout_constraintTop_toBottomOf="@id/input_title_events" />
+        <TextView
+            android:id="@+id/text_title_events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_name_event"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/input_title_events"
+            app:layout_constraintBottom_toBottomOf="@id/input_title_events" />
 
-    <TextView
-        android:id="@+id/text_date_events"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/input_date_event"
-        app:layout_constraintTop_toTopOf="@id/date_button"
-        app:layout_constraintBottom_toBottomOf="@id/date_button"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <EditText
+            android:id="@+id/input_title_events"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_title_events"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@={viewModel.titleObs}"
+            />
 
-    <EditText
-        android:id="@+id/input_date_events"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@id/date_button"
-        app:layout_constraintStart_toEndOf="@id/text_date_events"
-        app:layout_constraintTop_toTopOf="@+id/date_button" />
+        <TextView
+            android:id="@+id/text_description_events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_descr_event"
+            app:layout_constraintTop_toTopOf="@id/input_description_events"
+            app:layout_constraintBottom_toBottomOf="@id/input_description_events"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/date_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/input_date_events"
-        app:layout_constraintTop_toBottomOf="@id/input_description_events"
-        app:icon="@drawable/ic_baseline_calendar_today_24"
-        android:text="@string/choose_date_button"
-        />
+        <EditText
+            android:id="@+id/input_description_events"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_description_events"
+            app:layout_constraintTop_toBottomOf="@id/input_title_events"
+            android:text="@={viewModel.descObs}"/>
 
-    <TextView
-        android:id="@+id/text_time_events"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/input_time_event"
-        app:layout_constraintTop_toTopOf="@id/time_button"
-        app:layout_constraintBottom_toBottomOf="@id/time_button"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/text_date_events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/input_date_event"
+            app:layout_constraintTop_toTopOf="@id/date_button"
+            app:layout_constraintBottom_toBottomOf="@id/date_button"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/input_time_events"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@+id/time_button"
-        app:layout_constraintStart_toEndOf="@id/text_time_events"
-        app:layout_constraintTop_toTopOf="@+id/time_button" />
+        <EditText
+            android:id="@+id/input_date_events"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/date_button"
+            app:layout_constraintStart_toEndOf="@id/text_date_events"
+            app:layout_constraintTop_toTopOf="@+id/date_button"
+            android:text="@={viewModel.dateString}"/>
 
-    <Button
-        android:id="@+id/time_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/choose_time_event"
-        app:icon="@drawable/ic_baseline_access_time_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/date_button"
-        app:layout_constraintTop_toBottomOf="@id/date_button" />
-
-    <Button
-        android:id="@+id/button_add_event"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/add_event_button"
-        app:icon="@drawable/ic_baseline_add_24"
-        />
+        <Button
+            android:id="@+id/date_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/input_date_events"
+            app:layout_constraintTop_toBottomOf="@id/input_description_events"
+            app:icon="@drawable/ic_baseline_calendar_today_24"
+            android:text="@string/choose_date_button" />
 
 
+        <Button
+            android:id="@+id/button_add_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/add_event_button"
+            app:icon="@drawable/ic_baseline_add_24" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

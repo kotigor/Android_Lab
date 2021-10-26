@@ -2,15 +2,10 @@ package ru.konstantinov.lab4
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.view.get
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import ru.konstantinov.lab4.databinding.ActivityMainBinding
-import ru.konstantinov.lab4.ui.EventListFragment
-import ru.konstantinov.lab4.ui.HolidaysFragment
-import ru.konstantinov.lab4.ui.ProfileFragment
+import ru.konstantinov.lab4.ui.eventlist.EventListFragment
+import ru.konstantinov.lab4.ui.holidays.HolidaysFragment
+import ru.konstantinov.lab4.ui.profile.ProfileFragment
 import ru.konstantinov.lab4.ui.common.App
 
 class MainActivity : AppCompatActivity() {

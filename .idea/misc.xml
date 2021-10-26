@@ -7,14 +7,16 @@
         <entry key="..\:/5semestr/Android/lab4/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/5semestr/Android/lab4/app/src/main/res/layout/fragment_about.xml" value="0.36666666666666664" />
         <entry key="..\:/5semestr/Android/lab4/app/src/main/res/layout/fragment_add_event.xml" value="0.25" />
+        <entry key="..\:/5semestr/Android/lab4/app/src/main/res/layout/fragment_event_desc.xml" value="0.18" />
         <entry key="..\:/5semestr/Android/lab4/app/src/main/res/layout/fragment_events.xml" value="0.1778115501519757" />
         <entry key="..\:/5semestr/Android/lab4/app/src/main/res/layout/fragment_holidays.xml" value="0.22291666666666668" />
         <entry key="..\:/5semestr/Android/lab4/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="..\:/5semestr/Android/lab4/app/src/main/res/layout/fragment_settings.xml" value="0.36666666666666664" />
         <entry key="..\:/5semestr/Android/lab4/app/src/main/res/layout/fragments_holidays.xml" value="0.1398148148148148" />
         <entry key="..\:/5semestr/Android/lab4/app/src/main/res/layout/fragments_profile.xml" value="0.1398148148148148" />
-        <entry key="..\:/5semestr/Android/lab4/app/src/main/res/layout/recyclerview_event_item.xml" value="0.33" />
+        <entry key="..\:/5semestr/Android/lab4/app/src/main/res/layout/recyclerview_event_item.xml" value="0.25" />
         <entry key="..\:/5semestr/Android/lab4/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1398148148148148" />
+        <entry key="..\:/5semestr/Android/lab4/app/src/main/res/menu/event_desc_menu.xml" value="0.20677083333333332" />
       </map>
     </option>
   </component>

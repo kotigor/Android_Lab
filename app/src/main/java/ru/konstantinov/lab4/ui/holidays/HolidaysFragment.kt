@@ -1,4 +1,4 @@
-package ru.konstantinov.lab4.ui
+package ru.konstantinov.lab4.ui.holidays
 
 import android.os.Bundle
 import android.view.LayoutInflater

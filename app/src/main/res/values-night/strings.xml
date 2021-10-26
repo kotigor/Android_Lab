@@ -4,5 +4,6 @@
     <string name="input_descr_event">Описание:</string>
     <string name="input_time_event">Время:</string>
     <string name="choose_time_event">Выбрать время</string>
-    <string name="add_event_button">Добавить событие</string>
+    <string name="add_event_button">Сохранить</string>
+    <string name="remove">remiove</string>
 </resources>

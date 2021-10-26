@@ -1,4 +1,4 @@
-package ru.konstantinov.lab4.ui
+package ru.konstantinov.lab4.ui.profile
 
 import android.app.Application
 import androidx.fragment.app.Fragment
